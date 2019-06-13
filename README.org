@@ -2,11 +2,9 @@
 
 Repo containing python scripts and stuff.
 
-
-
 ** Resources
-
-[[https://python.swaroopch.com/][A Byte of Python]]
+- [[https://python.swaroopch.com/][A Byte of Python]]
+- 
 
 ** Data Structures
 
@@ -14,12 +12,97 @@ Repo containing python scripts and stuff.
 
 Pretty much like ruby's arrays.
 
-#+BEGIN_SRC python :result output
+#+BEGIN_SRC python :results output
 list = ["a", "b", "c", "d"]
+
+# accessing elements
+list[0]
+
+# adding elements
+list.append("e")
+
 #+END_SRC
+
+Python is not as object-oriented as ruby, so you have to use function to work on lists.
+
+#+BEGIN_SRC python :results output
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+#             __________________ lambda expression!
+even = filter(lambda x: x%2 == 0, numbers)
+print(even)
+#+END_SRC 
+
+#+RESULTS:
+: [2, 4, 6, 8, 10]
+
+**** Methods
+- append()	
+- extend(iterable) :: appends items from an iterable.
+     #+BEGIN_SRC python :results output
+     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+     numbers.extend([11,12,13])
+     print(numbers)
+     #+END_SRC
+
+     #+RESULTS:
+     : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+** Lambdas
+
+#+BEGIN_SRC python :results output
+l = lambda var : var * var
+print(l(5))
+#+END_SRC
+
 ** Tools
 
-- [[https://github.com/prompt-toolkit/ptpython][ptpython]] :: Nice REPL python
+- [[https://github.com/prompt-toolkit/ptpython][ptpython]] :: Nice REPL for python
 #+BEGIN_SRC sh
 pip install ptpython
 #+END_SRC
+
+- [[https://github.com/proofit404/anaconda-mode][anaconda-mode]] :: Code navigation, documentation lookup and completion for Python.
+** Terms
+
+- Iterator :: an object that can be iterated upon. EG lists, tuples, strings.
+An iterator must implement the methods __iter__() and __next__()
+
+* The Zen of Python
+
+Beautiful is better than ugly.
+
+Explicit is better than implicit.
+
+Simple is better than complex.
+
+Complex is better than complicated.
+
+Flat is better than nested.
+
+Sparse is better than dense.
+
+Readability counts.
+
+Special cases aren't special enough to break the rules.
+
+Although practicality beats purity.
+
+Errors should never pass silently.
+
+Unless explicitly silenced.
+
+In the face of ambiguity, refuse the temptation to guess.
+
+There should be one-- and preferably only one --obvious way to do it.
+
+Although that way may not be obvious at first unless you're Dutch.
+
+Now is better than never.
+
+Although never is often better than *right* now.
+
+If the implementation is hard to explain, it's a bad idea.
+
+If the implementation is easy to explain, it may be a good idea.
+
+Namespaces are one honking great idea -- let's do more of those!
