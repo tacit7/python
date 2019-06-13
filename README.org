@@ -1,3 +1,25 @@
 * Python
 
 Repo containing python scripts and stuff.
+
+
+
+** Resources
+
+[[https://python.swaroopch.com/][A Byte of Python]]
+
+** Data Structures
+
+*** Lists
+
+Pretty much like ruby's arrays.
+
+#+BEGIN_SRC python :result output
+list = ["a", "b", "c", "d"]
+#+END_SRC
+** Tools
+
+- [[https://github.com/prompt-toolkit/ptpython][ptpython]] :: Nice REPL python
+#+BEGIN_SRC sh
+pip install ptpython
+#+END_SRC
