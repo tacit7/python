@@ -67,6 +67,23 @@ pip install ptpython
 - Iterator :: an object that can be iterated upon. EG lists, tuples, strings.
 An iterator must implement the methods __iter__() and __next__()
 
+
+
+** Data Structures and Algorithms in Python
+*** Chapter 4 Recursion
+#+BEGIN_SRC python :results output
+def factorial(x):
+    if x == 0:
+        return 1
+    else:
+        return x * factorial(x - 1)
+
+print(factorial(3))
+#+END_SRC
+
+#+RESULTS:
+: 6
+
 * The Zen of Python
 
 Beautiful is better than ugly.
