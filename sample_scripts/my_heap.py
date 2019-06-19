@@ -56,7 +56,7 @@ class MyHeap(object):
             self.swap(self.parent_index(index), index)
             index = self.parent_index(index)
 
-        print(self.heap)
+        return self.heap
 
     def heapify_down(self):
         index = 0

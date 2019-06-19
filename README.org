@@ -4,8 +4,8 @@ Repo containing python scripts and stuff.
 
 ** Resources
 - [[https://python.swaroopch.com/][A Byte of Python]]
-- 
-
+- [[https://docs.python.org/3/tutorial/index.html][python.org]]
+- [[https://amaral.northwestern.edu/resources/guides/pyenv-tutorial][Installing pyenv]]
 ** Data Structures
 
 *** Lists
@@ -25,8 +25,13 @@ list.append("e")
 
 Python is not as object-oriented as ruby, so you have to use function to work on lists.
 
-#+BEGIN_SRC python :results output
+#+NAME: list-of-numbers
+#+BEGIN_SRC python
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+#+END_SRC
+
+#+BEGIN_SRC python :results output :noweb yes
+<<list-of-numbers>>
 #             __________________ lambda expression!
 even = filter(lambda x: x%2 == 0, numbers)
 print(even)
@@ -38,15 +43,47 @@ print(even)
 **** Methods
 - append()	
 - extend(iterable) :: appends items from an iterable.
-     #+BEGIN_SRC python :results output
-     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-     numbers.extend([11,12,13])
-     print(numbers)
-     #+END_SRC
+  #+BEGIN_SRC python :results output :noweb yes
+  <<list-of-numbers>>
+  numbers.extend([11,12,13])
+  print(numbers)
+  #+END_SRC
 
-     #+RESULTS:
-     : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  #+RESULTS:
+  : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
+- insert(x,y)
+  #+BEGIN_SRC python :results output :noweb yes
+    <<list-of-numbers>>
+    index = 0
+    value = 999
+    numbers.insert(index, value)
+    print(numbers)
+  #+END_SRC
+
+  #+RESULTS:
+  : [999, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+- remove(value)
+*Returns an error if there is no such item.*
+  #+BEGIN_SRC python :results output :noweb yes
+    <<list-of-numbers>>
+    numbers.remove(5)
+    numbers.remove(6)
+    numbers.remove(7)
+    print(numbers)
+  #+END_SRC
+
+  #+RESULTS:
+  : [1, 2, 3, 4, 8, 9, 10]
+
+- pop([value])
+Removes item at the given position and returns it.
+If no value is given, it returns the last element and removes it.
+See note on optional parameters
+
+  #+BEGIN_SRC python :results output :noweb yes
+  #+END_SRC
 ** Lambdas
 
 #+BEGIN_SRC python :results output
@@ -61,9 +98,11 @@ print(l(5))
 pip install ptpython
 #+END_SRC
 
+- pyenv :: python version management tool. Equivalent of rbenv.
 - [[https://github.com/proofit404/anaconda-mode][anaconda-mode]] :: Code navigation, documentation lookup and completion for Python.
-** Terms
+** Terms and language specific 
 
+- <<<optional parameters>>> :: Brackets in method signatures denote that the value is in the bracket is optional.
 - Iterator :: an object that can be iterated upon. EG lists, tuples, strings.
 An iterator must implement the methods __iter__() and __next__()
 
@@ -84,6 +123,49 @@ print(factorial(3))
 #+RESULTS:
 : 6
 
+
+
+
+
+** Sample code
+
+*** Shortest range in k sorted lists
+Given k sorted lists of integers of size n each, find the smallest range that
+includes at least one element from each of the k lists.
+If more than one smallest ranges are found, print any one of them.
+#+BEGIN_SRC python :results output
+    list1 = [4, 10, 15, 24]
+    list2 = [0,  9, 12, 20]
+    list3 = [5, 18, 22, 30]
+
+          for numbers in a:
+              min 
+#+END_SRC
+
+
+*** Heap
+#+BEGIN_SRC python :results output
+  class MyHeap:
+      def __init__(self, lst):
+          self.heap = [0]
+          self.heap = self.heap.append(lst)
+
+      def heap:
+          return heap;
+
+      def left_index(self, index):
+          return 2 * index
+
+      def right_index(self, index):
+          return 2*index + 1
+
+      def parent_index(self, index):
+          return (index/2) + 1
+
+      def swap(self, index1, index2):
+          temp = self.heap[index1]
+          sh
+#+END_SRC
 * The Zen of Python
 
 Beautiful is better than ugly.
@@ -123,3 +205,4 @@ If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 
 Namespaces are one honking great idea -- let's do more of those!
+

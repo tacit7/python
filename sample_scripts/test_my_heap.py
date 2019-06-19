@@ -67,5 +67,10 @@ class TestMyHeap(unittest.TestCase):
             11,12,  21, 2]
         h = my_heap.MyHeap(heap)
 
-        self.assertTrue(h.heapify_up())
+        self.assertEqual(h.heapify_up(), [0,1,2,11,12,21,22])
+        heap = [
+                 0,
+            12,        22,
+            11,1,  21, 2]
+        self.assertEqual(h.heapify_up(), [0,1,2,11,12,21,22])
 
