@@ -1,11 +1,75 @@
+#+SETUPFILE: ~/repo/org-html-themes/setup/theme-readtheorg.setup
+
 * Python
 
 Repo containing python scripts and stuff.
+
+** The Zen of Python
+
+Beautiful is better than ugly.
+
+Explicit is better than implicit.
+
+Simple is better than complex.
+
+Complex is better than complicated.
+
+Flat is better than nested.
+
+Sparse is better than dense.
+
+Readability counts.
+
+Special cases aren't special enough to break the rules.
+
+Although practicality beats purity.
+
+Errors should never pass silently.
+
+Unless explicitly silenced.
+
+In the face of ambiguity, refuse the temptation to guess.
+
+There should be one-- and preferably only one --obvious way to do it.
+
+Although that way may not be obvious at first unless you're Dutch.
+
+Now is better than never.
+
+Although never is often better than *right* now.
+
+If the implementation is hard to explain, it's a bad idea.
+
+If the implementation is easy to explain, it may be a good idea.
+
+Namespaces are one honking great idea -- let's do more of those!
+
 
 ** Resources
 - [[https://python.swaroopch.com/][A Byte of Python]]
 - [[https://docs.python.org/3/tutorial/index.html][python.org]]
 - [[https://amaral.northwestern.edu/resources/guides/pyenv-tutorial][Installing pyenv]]
+
+** Tools
+
+- [[https://github.com/proofit404/anaconda-mode][anaconda-mode]] :: Code navigation, documentation lookup and completion for Python.
+- IPython ::  Pry for python
+  pip install ipython
+
+  #+BEGIN_SRC python
+  from IPython import embed
+  embed()
+  #+END_SRC
+- [[https://github.com/prompt-toolkit/ptpython][ptpython]] :: Nice REPL for python
+#+BEGIN_SRC sh
+pip install ptpython
+#+END_SRC
+
+- pyenv :: python version management tool. Equivalent of rbenv.
+
+- [[https://github.com/proofit404/anaconda-mode][anaconda-mode]] :: Code navigation, documentation lookup and completion for Python.
+
+
 ** Data Structures
 
 *** Lists
@@ -84,6 +148,7 @@ See note on optional parameters
 
   #+BEGIN_SRC python :results output :noweb yes
   #+END_SRC
+
 ** Lambdas
 
 #+BEGIN_SRC python :results output
@@ -91,23 +156,6 @@ l = lambda var : var * var
 print(l(5))
 #+END_SRC
 
-** Tools
-
-- [[https://github.com/proofit404/anaconda-mode][anaconda-mode]] :: Code navigation, documentation lookup and completion for Python.
-- IPython ::  Pry for python
-  pip install ipython
-
-  #+BEGIN_SRC python
-  from IPython import embed
-  embed()
-  #+END_SRC
-- [[https://github.com/prompt-toolkit/ptpython][ptpython]] :: Nice REPL for python
-#+BEGIN_SRC sh
-pip install ptpython
-#+END_SRC
-
-- pyenv :: python version management tool. Equivalent of rbenv.
-- [[https://github.com/proofit404/anaconda-mode][anaconda-mode]] :: Code navigation, documentation lookup and completion for Python.
 ** Terms and language specific 
 
 - <<<optional parameters>>> :: Brackets in method signatures denote that the value is in the bracket is optional.
@@ -174,43 +222,40 @@ If more than one smallest ranges are found, print any one of them.
           temp = self.heap[index1]
           sh
 #+END_SRC
-* The Zen of Python
 
-Beautiful is better than ugly.
 
-Explicit is better than implicit.
 
-Simple is better than complex.
+* Algorithms and Data Structures
 
-Complex is better than complicated.
+** When optimizing and algorithm
+Bottlenecks
+Necessary work
+Duplicate Work
+** Data structures
 
-Flat is better than nested.
+*** Graphs
 
-Sparse is better than dense.
+- graph ::
+  A graph represents a relationship that exist between pairs of objects.
+  These objects are called vertices.
+  The object have a pairwise connection called edges.
 
-Readability counts.
+  Graphs can be applied to mapping, transportation, computer networks,
+  and electrical engineering.
 
-Special cases aren't special enough to break the rules.
+  Graphs are not function plots, histograms, etc.
 
-Although practicality beats purity.
+- directed graph :: a set of nodes that are unidirectional.
 
-Errors should never pass silently.
+- undirected graph :: a set of nodes that are bidirectional.
 
-Unless explicitly silenced.
+- degree :: number of edges connecting to a vertex.
 
-In the face of ambiguity, refuse the temptation to guess.
+- indegree :: number of incoming edges connecting to a vertex.
 
-There should be one-- and preferably only one --obvious way to do it.
+- outdegree :: number of incoming edges connecting to a vertex.
 
-Although that way may not be obvious at first unless you're Dutch.
 
-Now is better than never.
 
-Although never is often better than *right* now.
 
-If the implementation is hard to explain, it's a bad idea.
-
-If the implementation is easy to explain, it may be a good idea.
-
-Namespaces are one honking great idea -- let's do more of those!
 
