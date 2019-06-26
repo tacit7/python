@@ -226,12 +226,18 @@ If more than one smallest ranges are found, print any one of them.
 
 
 * Algorithms and Data Structures
-
 ** When optimizing and algorithm
 Bottlenecks
 Necessary work
 Duplicate Work
+
 ** Data structures
+*** Trees
+**** Ordering
+
+- inorder ::
+- postorder ::
+- preorder ::
 
 *** Graphs
 
@@ -259,3 +265,47 @@ Duplicate Work
 
 
 
+
+
+** Questions
+*** Find the middle of a linked list
+We can:
+First approach
+  - traverse the list once
+  - get size
+  - traverse to half the length
+
+ Space O(n)
+ Space O(1)
+
+
+A better approach:
+  - You slow and fast pointer
+    - slow goes at 1 speed 
+    - fast goes at 2^n speed
+
+      Time:  O(n/2)
+      Space: O(1)
+
+   Example.
+#+BEGIN_SRC 
+|------------+-----------------------|
+| iternation | list                  |
+|   starting | f                     |
+|            | s                     |
+|            | [0][1][2][3][4][5][6] |
+|------------+-----------------------|
+|          1 | -------f              |
+|            | ----s                 |
+|            | [0][1][2][3][4][5][6] |
+|------------+-----------------------|
+|          2 | -------------f        |
+|            | -------s              |
+|            | [0][1][2][3][4][5][6] |
+|------------+-----------------------|
+|          3 | -------------------f  |
+|            | ----------s           |
+|            | [0][1][2][3][4][5][6] |
+|------------+-----------------------|
+
+#+END_SRC
