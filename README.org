@@ -183,6 +183,11 @@ print(factorial(3))
 
 
 
+** Reloading module 
+#+BEGIN_SRC python
+    import importlib
+    importlib.reload(module)
+#+END_SRC
 ** Sample code
 
 *** Shortest range in k sorted lists
@@ -225,6 +230,13 @@ If more than one smallest ranges are found, print any one of them.
 
 
 
+
+** Q&A
+
+Whats the difference between == and is?
+
+==  evaluates value equality
+`is`  
 * Algorithms and Data Structures
 ** When optimizing and algorithm
 Bottlenecks
