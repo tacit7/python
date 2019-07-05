@@ -1,42 +1,42 @@
 
 # Table of Contents
 
-1.  [Python](#orge69b061)
-    1.  [The Zen of Python](#org355d770)
-    2.  [Resources](#orgbf6bb73)
-    3.  [Tools](#org866036f)
-    4.  [Data Structures](#orgbb432a3)
-        1.  [Lists](#orgee639ac)
-    5.  [Lambdas](#org8d63031)
-    6.  [Terms and language specific](#org9b19a79)
-    7.  [Data Structures and Algorithms in Python](#orgd5741a1)
-        1.  [Chapter 4 Recursion](#org4225518)
-    8.  [Reloading module](#orge5fa915)
-    9.  [Sample code](#org321d1dc)
-        1.  [Shortest range in k sorted lists](#org9a29503)
-        2.  [Heap](#orgf311dff)
-    10. [Q&A](#orgfedb521)
-2.  [Algorithms and Data Structures](#orgde92adc)
-    1.  [Recursion](#org9ea8ab7)
-        1.  [Some points](#org9e20755)
-        2.  [Examples](#org57424a2)
-    2.  [When optimizing and algorithm](#orga185bea)
-    3.  [Data structures](#org4f93bbd)
-        1.  [Trees](#org7e990a7)
-        2.  [Graphs](#org4aef4cd)
-    4.  [Questions](#org9fca7fe)
-        1.  [Find the middle of a linked list](#org925753d)
+1.  [Python](#org4694cbc)
+    1.  [The Zen of Python](#org5ceaa67)
+    2.  [Resources](#orgc4b0e86)
+    3.  [Tools](#org019b1c5)
+    4.  [Data Structures](#org3620cfa)
+        1.  [Lists](#org613eb40)
+    5.  [Lambdas](#org9fffb32)
+    6.  [Terms and language specific](#org84315f9)
+    7.  [Data Structures and Algorithms in Python](#org40c5a85)
+        1.  [Chapter 4 Recursion](#org53e20e6)
+    8.  [Reloading module](#org1eaebc8)
+    9.  [Sample code](#org1beba98)
+        1.  [Shortest range in k sorted lists](#org988ba92)
+        2.  [Heap](#org8ecc52f)
+    10. [Q&A](#orgea45d90)
+2.  [Algorithms and Data Structures](#orgb9ce2e9)
+    1.  [Recursion](#orgfde8b28)
+        1.  [Some points](#org4b58edc)
+        2.  [Examples](#org284fedd)
+    2.  [When optimizing and algorithm](#orged57989)
+    3.  [Data structures](#orgc9520a8)
+        1.  [Trees](#orged0d83a)
+        2.  [Graphs](#org130f776)
+    4.  [Questions](#org1ea83f1)
+        1.  [Find the middle of a linked list](#org5cc13ef)
 
 
 
-<a id="orge69b061"></a>
+<a id="org4694cbc"></a>
 
 # Python
 
 Repo containing python scripts and stuff.
 
 
-<a id="org355d770"></a>
+<a id="org5ceaa67"></a>
 
 ## The Zen of Python
 
@@ -79,7 +79,7 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea &#x2013; let's do more of those!
 
 
-<a id="orgbf6bb73"></a>
+<a id="orgc4b0e86"></a>
 
 ## Resources
 
@@ -88,7 +88,7 @@ Namespaces are one honking great idea &#x2013; let's do more of those!
 -   [Installing pyenv](https://amaral.northwestern.edu/resources/guides/pyenv-tutorial)
 
 
-<a id="org866036f"></a>
+<a id="org019b1c5"></a>
 
 ## Tools
 
@@ -107,12 +107,12 @@ Namespaces are one honking great idea &#x2013; let's do more of those!
 -   **[anaconda-mode](https://github.com/proofit404/anaconda-mode):** Code navigation, documentation lookup and completion for Python.
 
 
-<a id="orgbb432a3"></a>
+<a id="org3620cfa"></a>
 
 ## Data Structures
 
 
-<a id="orgee639ac"></a>
+<a id="org613eb40"></a>
 
 ### Lists
 
@@ -169,7 +169,7 @@ Python is not as object-oriented as ruby, so you have to use function to work on
     See note on optional parameters
 
 
-<a id="org8d63031"></a>
+<a id="org9fffb32"></a>
 
 ## Lambdas
 
@@ -177,22 +177,22 @@ Python is not as object-oriented as ruby, so you have to use function to work on
     print(l(5))
 
 
-<a id="org9b19a79"></a>
+<a id="org84315f9"></a>
 
 ## Terms and language specific
 
--   **<a id="org939271c">optional parameters</a>:** Brackets in method signatures denote that the value is in the bracket is optional.
+-   **<a id="org7aaa9c1">optional parameters</a>:** Brackets in method signatures denote that the value is in the bracket is optional.
 -   **Iterator:** an object that can be iterated upon. EG lists, tuples, strings.
 
 An iterator must implement the methods \_\_iter\_\_() and \_\_next\_\_()
 
 
-<a id="orgd5741a1"></a>
+<a id="org40c5a85"></a>
 
 ## Data Structures and Algorithms in Python
 
 
-<a id="org4225518"></a>
+<a id="org53e20e6"></a>
 
 ### Chapter 4 Recursion
 
@@ -205,7 +205,7 @@ An iterator must implement the methods \_\_iter\_\_() and \_\_next\_\_()
     print(factorial(3))
 
 
-<a id="orge5fa915"></a>
+<a id="org1eaebc8"></a>
 
 ## Reloading module
 
@@ -213,12 +213,12 @@ An iterator must implement the methods \_\_iter\_\_() and \_\_next\_\_()
     importlib.reload(module)
 
 
-<a id="org321d1dc"></a>
+<a id="org1beba98"></a>
 
 ## Sample code
 
 
-<a id="org9a29503"></a>
+<a id="org988ba92"></a>
 
 ### Shortest range in k sorted lists
 
@@ -234,7 +234,7 @@ If more than one smallest ranges are found, print any one of them.
               min 
 
 
-<a id="orgf311dff"></a>
+<a id="org8ecc52f"></a>
 
 ### Heap
 
@@ -260,7 +260,7 @@ If more than one smallest ranges are found, print any one of them.
             sh
 
 
-<a id="orgfedb521"></a>
+<a id="orgea45d90"></a>
 
 ## Q&A
 
@@ -275,12 +275,12 @@ How do you print on the same line?
     print(" line", end ="") 
 
 
-<a id="orgde92adc"></a>
+<a id="orgb9ce2e9"></a>
 
 # Algorithms and Data Structures
 
 
-<a id="org9ea8ab7"></a>
+<a id="orgfde8b28"></a>
 
 ## Recursion
 
@@ -290,23 +290,23 @@ How do you print on the same line?
 
 -   Every recursive algorithm involves at least 2 cases:
     
-    -   **<a id="org32f6ffd"></a> base case:** Simple occurrence that can be answered directly
+    -   **<a id="orgda42f1d"></a> base case:** Simple occurrence that can be answered directly
     
-    -   <a id="orgc72c7be"></a> recursive::  A complex occurrence that cannot be answered
+    -   <a id="orgc5649cb"></a> recursive::  A complex occurrence that cannot be answered
         directly. Instead, it can be described in terms of smaller occurrences of
         the same problem.
     
-    Usually, the [3.1](#org32f6ffd) is the case where the problem has been solved. 
+    Usually, the [3.1](#orgda42f1d) is the case where the problem has been solved. 
     
     Key: Ask yourslef, How can I describe this algorithm in terms of a smaller or
     simpler version of itself?
 
 
-<a id="org9e20755"></a>
+<a id="org4b58edc"></a>
 
 ### Some points
 
--   All the work usually starts at the end, so think what is the last thing i need to do ([3.1](#org32f6ffd))
+-   All the work usually starts at the end, so think what is the last thing i need to do ([3.1](#orgda42f1d))
 -   Trust that all the function call are doing their work.
 -   Where you call your function recursively matters.
     -   Should you place it before or after your function performs their task?
@@ -314,7 +314,7 @@ How do you print on the same line?
     IE return an empty array, empty string, etc.
 
 
-<a id="org57424a2"></a>
+<a id="org284fedd"></a>
 
 ### Examples
 
@@ -419,7 +419,7 @@ How do you print on the same line?
         [0, 1, 2, 3, 4]
 
 
-<a id="orga185bea"></a>
+<a id="orged57989"></a>
 
 ## When optimizing and algorithm
 
@@ -428,12 +428,12 @@ Necessary work
 Duplicate Work
 
 
-<a id="org4f93bbd"></a>
+<a id="orgc9520a8"></a>
 
 ## Data structures
 
 
-<a id="org7e990a7"></a>
+<a id="orged0d83a"></a>
 
 ### Trees
 
@@ -446,7 +446,7 @@ Duplicate Work
     -   **preorder:** 
 
 
-<a id="org4aef4cd"></a>
+<a id="org130f776"></a>
 
 ### Graphs
 
@@ -470,12 +470,12 @@ Duplicate Work
 -   **outdegree:** number of incoming edges connecting to a vertex.
 
 
-<a id="org9fca7fe"></a>
+<a id="org1ea83f1"></a>
 
 ## Questions
 
 
-<a id="org925753d"></a>
+<a id="org5cc13ef"></a>
 
 ### Find the middle of a linked list
 

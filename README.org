@@ -457,7 +457,7 @@ A better approach:
       Space: O(1)
 
    Example.
-#+BEGIN_SRC 
+#+BEGIN_EXAMPLE
 |------------+-----------------------|
 | iternation | list                  |
 |   starting | f                     |
@@ -477,5 +477,5 @@ A better approach:
 |            | [0][1][2][3][4][5][6] |
 |------------+-----------------------|
 
-#+END_SRC
+#+END_EXAMPLE
 
