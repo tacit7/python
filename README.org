@@ -255,9 +255,9 @@ print(" line", end ="")
   - Each function is a worker doing a *part* of the worker
 
 - Every recursive algorithm involves at least 2 cases:
-  - <<base case>> :: Simple occurrence that can be answered directly
+  - <<base case>> base case :: Simple occurrence that can be answered directly
 
-  - <<recursive case>> ::  A complex occurrence that cannot be answered
+  - <<recursive case>> recursive::  A complex occurrence that cannot be answered
        directly. Instead, it can be described in terms of smaller occurrences of
        the same problem.
   
