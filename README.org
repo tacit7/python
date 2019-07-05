@@ -265,7 +265,12 @@ print(" line", end ="")
   
   Key: Ask yourslef, How can I describe this algorithm in terms of a smaller or
   simpler version of itself?
-  
+ 
+*** Some points
+- All the work usually starts at the end, so think what is the last thing i need to do ([[base case]])
+- Trust that all the function call are doing their work.
+- Where you call your function recursively matters.
+  - Should you place it before or after your function performs their task?
 
 *** Examples
 **** Print the number of stars 
@@ -338,7 +343,38 @@ print(" line", end ="")
 - Note 2
   The '//' operator is floor division. If you use regular division, you will get decimals.
   
-**** 
+**** Reverse array 
+#+BEGIN_SRC python :results output
+  def reverse_array(ar):
+      print(ar)
+      if len(ar) == 1:
+          print('last elem')
+          return ar
+      else:
+          last = ar.pop()
+          rev = reverse_array(ar)
+          rev.insert(0, last)
+          print(rev)
+          return rev
+
+  print(reverse_array([4, 3,2,1,0 ]))
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+[4, 3, 2, 1, 0]
+[4, 3, 2, 1]
+[4, 3, 2]
+[4, 3]
+[4]
+last elem
+[3, 4]
+[2, 3, 4]
+[1, 2, 3, 4]
+[0, 1, 2, 3, 4]
+[0, 1, 2, 3, 4]
+#+end_example
+
 ** When optimizing and algorithm
 Bottlenecks
 Necessary work
