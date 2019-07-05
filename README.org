@@ -295,7 +295,7 @@ print(" line", end ="")
 : *
 
 **** Power
-#+BEGIN_SRC python :results output :export both
+#+BEGIN_SRC python :results output :exports both
   def power(base, exp): # you  had power(base, power) and the function sig was conflicting with the var
       if exp == 0:
           return 1
@@ -313,7 +313,7 @@ print(" line", end ="")
 : 27
 
 **** Palindrome
-#+BEGIN_SRC python :results output
+#+BEGIN_SRC python :results output :exports both
 
   def is_palindrome(string):
       if len(string) <= 2:
@@ -336,7 +336,7 @@ print(" line", end ="")
 
 
 **** Print binary
-#+BEGIN_SRC python :results output :export both
+#+BEGIN_SRC python :results output :exports both
   def print_binary(number):
       if number < 2:
           print(1, end = '')
