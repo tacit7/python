@@ -237,7 +237,108 @@ Whats the difference between == and is?
 
 ==  evaluates value equality
 `is`  
+
+How do you print on the same line?
+#+BEGIN_SRC python :results output
+print("same", end ="") 
+print(" line", end ="") 
+
+#+END_SRC
+
+#+RESULTS:
+: same line
+
 * Algorithms and Data Structures
+** Recursion
+- You must describe the task at hand in terms of itself
+- Each function call must perform one task
+  - Each function is a worker doing a *part* of the worker
+
+- Every recursive algorithm involves at least 2 cases:
+  - <<base case>> :: Simple occurrence that can be answered directly
+
+  - <<recursive case>> ::  A complex occurrence that cannot be answered
+       directly. Instead, it can be described in terms of smaller occurrences of
+       the same problem.
+  
+  Usually, the [[base case]] is the case where the problem has been solved. 
+  
+  Key: Ask yourslef, How can I describe this algorithm in terms of a smaller or
+  simpler version of itself?
+  
+
+*** Examples
+**** Print the number of stars 
+#+BEGIN_SRC python :results output
+  def print_stars(number_stars):
+      if number_stars == 1: # base case
+          print("*")
+      else:
+          print("*") # You can move both prints to the top of the function
+          print_stars(number_stars - 1)
+
+  print_stars(50)
+#+END_SRC
+
+**** Power
+#+BEGIN_SRC python :results output
+  def power(base, exp): # you  had power(base, power) and the function sig was conflicting with the var
+      if exp == 0:
+          return 1
+      else:
+          return base * power(base, exp - 1)
+
+  print(power(3, 3))
+#+END_SRC
+
+**** Palindrome
+#+BEGIN_SRC python :results output
+
+  def is_palindrome(string):
+      if len(string) <= 2:
+          return True
+      else:
+          if string[0] == string[-1]:
+              return is_palindrome(string[1:-1])
+          else:
+              return False
+
+  print(is_palindrome('racecar'))
+#+END_SRC
+
+#+RESULTS:
+: True
+
+
+**** Print binary
+#+BEGIN_SRC python :results output
+  def print_binary(number):
+      if number < 2:
+          print(1, end = '')
+      else:
+          last_digit = number % 2 # See note 1
+          rest_of_digits = number // 2 # see note 2
+          print_binary(rest_of_digits)
+          print(str(last_digit),end = '') # this wont be reached until the very last digit because of the previous line
+  print_binary(10)
+#+END_SRC
+
+#+RESULTS:
+: 1010
+
+- Note 1
+  Just like when you want to pop a number in decimal.
+  EG
+  14 % 10 = 4
+
+  # 11 in binary is 1011
+  11  % 2 = 1
+  or 1010
+
+- Note 2
+  The '//' operator is floor division. If you use regular division, you will get decimals.
+  
+**** 
 ** When optimizing and algorithm
 Bottlenecks
 Necessary work
@@ -321,3 +422,4 @@ A better approach:
 |------------+-----------------------|
 
 #+END_SRC
+
